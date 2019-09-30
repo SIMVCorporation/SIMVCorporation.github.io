@@ -12,7 +12,7 @@ password = 'dad74363';
 //    defaults to "/mqtt"
 //    may include query and fragment
 //
-path = "";
-path = "";
+// path = "/mqtt";
+// path = "/data/cloud?device=12345";
 
 cleansession = true;
