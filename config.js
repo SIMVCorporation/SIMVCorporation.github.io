@@ -1,8 +1,8 @@
 
 host = 'mqtt.dioty.co';	// hostname or IP address
-port = 8080;
+port = 8883;
 topic = '/simvcorporation@gmail.com/testes/mqtt';		// topic to subscribe to
-useTLS = false;
+useTLS = true;
 username = 'simvcorporation@gmail.com';
 password = 'dad74363';
 // username = "simvcorporation@gmail.com";
