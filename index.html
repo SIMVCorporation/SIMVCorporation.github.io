@@ -17,7 +17,7 @@
     var reconnectTimeout = 2000;
     function MQTTconnect() {
 	if (typeof path == "undefined") {
-		path = '';
+		path = '/mqtt';
 	}
 	mqtt = new Paho.MQTT.Client(
 			host, 
