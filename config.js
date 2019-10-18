@@ -1,5 +1,6 @@
                     var mqtt = require(mqtt);
-                    // Create a client connection
+
+					
                     var client = mqtt.connect("mqtt://mqtt.dioty.co:8080", {
                     username: simvcorporation@gmail.com,
                     password: dad74363
@@ -9,6 +10,7 @@
 
                     // Subscribe to a Topic
                     client.subscribe(/simvcorporation@gmail.com/test, function() {
+					
                     // When a message arrives, write it to the console
                             client.on('message', function(topic, message, packet) {
                                 console.log("Received '" + message + "' on '" + topic + "'");
