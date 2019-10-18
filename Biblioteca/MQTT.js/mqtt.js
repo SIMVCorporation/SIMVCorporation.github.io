@@ -8,9 +8,9 @@
  * See LICENSE for more information
  */
 
-var MqttClient = require('./lib/client')
-var connect = require('./lib/connect')
-var Store = require('./lib/store')
+var MqttClient = require('/lib/client')
+var connect = require('/lib/connect')
+var Store = require('/lib/store')
 
 module.exports.connect = connect
 
@@ -23,10 +23,10 @@ function cli () {
   var commist = require('commist')()
   var helpMe = require('help-me')()
 
-  commist.register('publish', require('./bin/pub'))
-  commist.register('subscribe', require('./bin/sub'))
+  commist.register('publish', require('/bin/pub'))
+  commist.register('subscribe', require('/bin/sub'))
   commist.register('version', function () {
-    console.log('MQTT.js version:', require('./package.json').version)
+    console.log('MQTT.js version:', require('/package.json').version)
   })
   commist.register('help', helpMe.toStdout)
 
