@@ -21,8 +21,12 @@
   "homepage": "https://github.com/SIMVCorporation/SIMVCorporation.github.io#readme",
   "dependencies": {
     "defined": "^1.0.0",
+<<<<<<< HEAD
     "mqtt": "^3.0.0",
     "require": "^2.4.20",
     "undefined": "^0.1.0"
+=======
+    "mqtt": "^3.0.0"
+>>>>>>> parent of a448f66... Undefined bug solved
   }
 }
