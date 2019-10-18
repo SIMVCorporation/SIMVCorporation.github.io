@@ -1,0 +1,25 @@
+{
+  "name": "simv",
+  "version": "1.0.0",
+  "description": "Sistema Inteligente de Maquina de Vendas",
+  "main": "simv.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SIMVCorporation/SIMVCorporation.github.io.git"
+  },
+  "keywords": [
+    "SIMV"
+  ],
+  "author": "SIMV Corporation",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/SIMVCorporation/SIMVCorporation.github.io/issues"
+  },
+  "homepage": "https://github.com/SIMVCorporation/SIMVCorporation.github.io#readme",
+  "dependencies": {
+    "mqtt": "^3.0.0"
+  }
+}
