@@ -3,7 +3,7 @@
 					
                     var client = mqtt.connect("mqtt://mqtt.dioty.co:8080", {
                     username: 'simvcorporation@gmail.com',
-                    password: dad74363
+                    password: 'dad74363'
                     });
 
                     client.on('connect', function() { // Check you have a connection
