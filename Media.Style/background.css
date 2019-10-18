@@ -3,5 +3,5 @@
     height: 1050px;
     background-image: url(Fundo.png);
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
