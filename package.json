@@ -17,12 +17,16 @@
     "MQTT"
   ],
   "author": "SIMV Corporation",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/SIMVCorporation/SIMVCorporation.github.io/issues"
   },
   "homepage": "https://github.com/SIMVCorporation/SIMVCorporation.github.io#readme",
   "dependencies": {
     "mqtt": "^3.0.0"
+  },
+  "devDependencies": {
+    "browserify": "latest"
   }
 }
+
