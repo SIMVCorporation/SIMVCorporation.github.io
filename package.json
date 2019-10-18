@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/SIMVCorporation/SIMVCorporation.github.io#readme",
   "dependencies": {
+    "defined": "^1.0.0",
     "mqtt": "^3.0.0"
   }
 }
