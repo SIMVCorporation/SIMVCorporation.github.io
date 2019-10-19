@@ -9,7 +9,7 @@
                     client.on('connect', function() { // Check you have a connection
 
                     // Subscribe to a Topic
-                    client.subscribe('SIMV/message', function() {
+                    client.subscribe('SIMV/relatorio', function() {
 					
                     // When a message arrives, write it to the console
                             client.on('message', function(topic, message, packet) {
@@ -18,7 +18,7 @@
                         });
 
                     // Publish a message to a Topic
-                        client.publish('SIMV/status', 'Servidor ONLINE', function() {
+                        client.publish('SIMV/relatorio', 'Site ONLINE', function() {
                             console.log("Message posted...");
                             client.end(); // Close the connection after publish
                         });
