@@ -20,6 +20,18 @@
                             });
                         });
 						
+						                    // Subscribe to a Topic
+                    client.subscribe('SIMV/relatorio2', function() {
+					
+                    // When a message arrives, write it to the console
+                            client.on('message', function(topic, message, packet) {
+                                console.log("Received '" + message + "' on '" + topic + "'");
+									var RelatorioMessage2 = message;
+									var span2 = document.querySelector('h4 span');
+										span2.innerHTML = RelatorioMessage2;
+                            });
+                        });
+						
 
 
 
