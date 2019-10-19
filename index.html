@@ -19,13 +19,22 @@
 	<h2>Relatório</h2>
     </font>
 	<script src="main.js" type="text/javascript">
+	                    // Subscribe to a Topic
+                    client.subscribe('SIMV/relatorio', function() {
+					
+                    // When a message arrives, write it to the console
+                            client.on('message', function(topic, message, packet) {
+                                console.log("Received '" + message + "' on '" + topic + "'");
+                            });
+                        });
+
+		</script>
 <table>
 	<tr>
     <td>Mensagem:</td>
     <td id=message></td>
 	</tr>
 </table>
-	</script>
     </center>
 				</div>
 
