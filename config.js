@@ -20,7 +20,6 @@
                     // Publish a message to a Topic
                         client.publish('SIMV/relatorio', 'Site ONLINE', function() {
                             console.log("Message posted...");
-                            client.end(); // Close the connection after publish
                         });
                     });
                 
