@@ -1,7 +1,7 @@
                     var mqtt = require('mqtt');
 
 					
-                    var client = mqtt.connect("mqtt://postman.cloudmqtt.com:10281", {
+                    var client = mqtt.connect("wss://postman.cloudmqtt.com:10281", {
                     username: 'fdbljoqc',
                     password: 'nVpPA7ekAFeW'
                     });
