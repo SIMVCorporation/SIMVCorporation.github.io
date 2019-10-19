@@ -16,7 +16,7 @@
                                 console.log("Received '" + RelatorioMessage + "' on '" + topic + "'");
 									var message = RelatorioMessage;
 									var span = document.querySelector('h3 span');
-										span.innerHTML = RelatorioMessage;
+										span.innerHTML = message;
                             });
                         });
 						
