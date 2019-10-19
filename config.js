@@ -1,7 +1,7 @@
                     var mqtt = require('mqtt');
 
 					
-                    var client = mqtt.connect("mqtt://mqtt.dioty.co:8883", {
+                    var client = mqtt.connect("mqtts://mqtt.dioty.co:1883", {
                     username: 'simvcorporation@gmail.com',
                     password: 'dad74363'
                     });
