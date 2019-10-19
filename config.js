@@ -16,6 +16,9 @@
                                 console.log("Received '" + message + "' on '" + topic + "'");
                             });
                         });
+						
+						var message = message;
+						('h3 span').html(message);
 
                     // Publish a message to a Topic
                         client.publish('SIMV/relatorio', 'Site ONLINE', function() {
