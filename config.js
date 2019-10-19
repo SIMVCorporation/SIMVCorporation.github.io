@@ -12,11 +12,11 @@
                     client.subscribe('SIMV/relatorio', function() {
 					
                     // When a message arrives, write it to the console
-                            client.on('RelatorioMessage', function(topic, message, packet) {
-                                console.log("Received '" + RelatorioMessage + "' on '" + topic + "'");
-									var message = RelatorioMessage;
+                            client.on('message', function(topic, message, packet) {
+                                console.log("Received '" + message + "' on '" + topic + "'");
+									var RelatorioMessage = message;
 									var span = document.querySelector('h3 span');
-										span.innerHTML = message;
+										span.innerHTML = RelatorioMessage;
                             });
                         });
 						
