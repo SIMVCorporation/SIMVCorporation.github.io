@@ -27,8 +27,8 @@
                             client.on('message2', function(topic, message, packet) {
                                 console.log("Received '" + message2 + "' on '" + topic + "'");
 									var RelatorioMessage2 = message2;
-									var span2 = document.querySelector('h4 span');
-										span2.innerHTML = RelatorioMessage2;
+									var span = document.querySelector('h4 span');
+										span.innerHTML = RelatorioMessage2;
                             });
                         });
 						
