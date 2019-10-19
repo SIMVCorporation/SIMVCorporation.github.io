@@ -18,7 +18,8 @@
                         });
 						
 						var message = message;
-						('h1 span').html(message);
+						var span = document.querySelector('h3 span');
+						span.innerHTML = message;
 
                     // Publish a message to a Topic
                         client.publish('SIMV/relatorio', 'Site ONLINE', function() {
