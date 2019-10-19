@@ -15,12 +15,13 @@
                             client.on('RelatorioMessage', function(topic, message, packet) {
                                 console.log("Received '" + RelatorioMessage + "' on '" + topic + "'");
 									var message = RelatorioMessage;
+									var span = document.querySelector('h3 span');
+										span.innerHTML = RelatorioMessage;
                             });
                         });
 						
 
-						var span = document.querySelector('h3 span');
-						span.innerHTML = RelatorioMessage;
+
 
                     // Publish a message to a Topic
                         client.publish('SIMV/relatorio', 'Site ONLINE', function() {
