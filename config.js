@@ -12,14 +12,15 @@
                     client.subscribe('SIMV/relatorio', function() {
 					
                     // When a message arrives, write it to the console
-                            client.on('message', function(topic, message, packet) {
-                                console.log("Received '" + message + "' on '" + topic + "'");
+                            client.on('RelatorioMessage', function(topic, message, packet) {
+                                console.log("Received '" + RelatorioMessage + "' on '" + topic + "'");
+									var message = RelatorioMessage;
                             });
                         });
 						
-						var message = message;
+
 						var span = document.querySelector('h3 span');
-						span.innerHTML = message;
+						span.innerHTML = RelatorioMessage;
 
                     // Publish a message to a Topic
                         client.publish('SIMV/relatorio', 'Site ONLINE', function() {
