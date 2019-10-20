@@ -70,17 +70,17 @@ body {
 <div class="topnav">
   <a href="#">Sistema Inteligente de Máquina de Vendas</a>
   <script>
-  	var SiteStatus = result
-	var site = document.getElementById("SiteStatus");
+  	var SiteStatus = result;
+	var img = document.getElementById("SiteStatus");
 function trocaImg(){
 setTimeout(function () {
   if (SiteStatus == true)
     {
-      site.src = "/Media.Style/SiteOff.png";
+      img.src = "/Media.Style/SiteOff.png";
     }
   else
     {
-      site.src = "/Media.Style/SiteOn.png";
+      img.src = "/Media.Style/SiteOn.png";
     }
 })
 };
