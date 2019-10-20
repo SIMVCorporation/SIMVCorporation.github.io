@@ -1,7 +1,6 @@
                     var mqtt = require('mqtt');
-					var includes = require('array-includes');
-					var assert = require('assert');
-					
+					var includes = require('includes');
+										
                     var client = mqtt.connect("mqtts://postman.cloudmqtt.com:30281", {
                     username: 'GitHub',
                     password: 'SIMVGithub'
@@ -16,11 +15,12 @@
                             client.on('message', function(topic, message, packet) {
                                 console.log("Received '" + message + "' on '" + topic + "'");
 									var RelatorioMessage = message;
-										if(assert.equal(includes(RelatorioMessage, 'ONLINE'), true)){
+									var result = RelatorioMessage.includes('ONLINE');
+										if(result = true){
 										var span = document.querySelector('h3 span');
 										span.innerHTML = RelatorioMessage;
 }
-									if(assert.equal(includes(RelatorioMessage, 'teste'), true)){
+									if(result = false){
 										var span = document.querySelector('h4 span');
 										span.innerHTML = RelatorioMessage;
 }
