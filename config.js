@@ -13,7 +13,22 @@
                             client.on('message', function(topic, message, packet) {
                                 console.log("Received '" + message + "' on '" + topic + "'");
 									var result = message.includes('ONLINE');
-									document.getElementById("SiteS").innerHTML = result; 
+									
+	var SiteStatus = result;
+	var img = document.getElementById("SiteStatus");
+function trocaImg(){
+setTimeout(function () {
+  if (SiteStatus == true)
+    {
+      img.src = "/Media.Style/SiteOff.png";
+    }
+  else
+    {
+      img.src = "/Media.Style/SiteOn.png";
+    }
+})
+};
+									
 									console.log(result);
 										if(result == true){
 											var span = document.querySelector('h3 span')
@@ -24,20 +39,7 @@
 										}								
                             });
                         });
-	var SiteStatus = result
-	var site = document.getElementById("SiteStatus");
-function trocaImg(){
-setTimeout(function () {
-  if (SiteStatus == true)
-    {
-      site.src = "/Media.Style/SiteOff.png";
-    }
-  else
-    {
-      site.src = "/Media.Style/SiteOn.png";
-    }
-})
-};
+
 
                         client.publish('SIMV/relatorio', 'Site ONLINE', function() {
                             console.log("Message posted...");
