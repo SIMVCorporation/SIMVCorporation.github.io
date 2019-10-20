@@ -1,5 +1,5 @@
                     var mqtt = require('mqtt');
-
+					var includes = require('array-includes');
 					
                     var client = mqtt.connect("mqtts://postman.cloudmqtt.com:30281", {
                     username: 'GitHub',
@@ -14,14 +14,14 @@
                     // When a message arrives, write it to the console
                             client.on('message', function(topic, message, packet) {
                                 console.log("Received '" + message + "' on '" + topic + "'");
-									var str = message;
-									if(str.match(/ONLINE/)){
-									var span = document.querySelector('h3 span');
-									span.innerHTML = str;
+									var RelatorioMessage = message;
+									if(includes(RelatorioMessage, 'ONLINE')){
+										var span = document.querySelector('h3 span');
+										span.innerHTML = RelatorioMessage;
 }
-									if(str.match(/teste/)){
-									var span = document.querySelector('h4 span');
-									span.innerHTML = str;
+									if(includes(RelatorioMessage, 'teste')){
+										var span = document.querySelector('h4 span');
+										span.innerHTML = RelatorioMessage;
 }
 										
 										
