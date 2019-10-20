@@ -23,8 +23,6 @@
   },
   "homepage": "https://github.com/SIMVCorporation/SIMVCorporation.github.io#readme",
   "dependencies": {
-    "array-includes": "^3.0.3",
-    "assert": "^2.0.0",
     "includes": "0.0.7",
     "mqtt": "^3.0.0"
   },
