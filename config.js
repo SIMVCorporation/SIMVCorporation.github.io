@@ -18,7 +18,7 @@
 											var span = document.querySelector('h3 span')
 											span.innerHTML = message
 										} else 	{
-											var span = document.querySelector('h4 span')
+											var span = document.querySelector('Caixa2 span')
 											span.innerHTML = message
 										}								
                             });
