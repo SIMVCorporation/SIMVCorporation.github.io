@@ -20,7 +20,7 @@
 										var span = document.querySelector('h3 span');
 										span.innerHTML = RelatorioMessage;
 }
-									if(assert.equal(includes(RelatorioMessage, 'teste'), false)){
+									if(assert.equal(includes(RelatorioMessage, 'teste'), true)){
 										var span = document.querySelector('h4 span');
 										span.innerHTML = RelatorioMessage;
 }
