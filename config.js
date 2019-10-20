@@ -17,7 +17,6 @@
 	var SiteStatus = result;
 	var img = document.getElementById("SiteStatus");
 function trocaImg(){
-setTimeout(function () {
   if (SiteStatus == true)
     {
       img.src = "/Media.Style/SiteOff.png";
@@ -26,7 +25,6 @@ setTimeout(function () {
     {
       img.src = "/Media.Style/SiteOn.png";
     }
-})
 };
 									
 									console.log(result);
