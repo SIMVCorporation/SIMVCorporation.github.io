@@ -16,7 +16,7 @@
                                 console.log("Received '" + message + "' on '" + topic + "'");
 									var result = message.includes('ONLINE');
 									console.log(result);
-										if(result = new boolean (false)){
+										if(result = 'false'){
 											var span = document.querySelector('h3 span')
 											span.innerHTML = message
 										} else {
