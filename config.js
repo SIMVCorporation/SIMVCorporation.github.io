@@ -17,11 +17,11 @@
 									var result = message.includes('ONLINE');
 									console.log(result);
 										if(result = false){
-											var span = document.querySelector('h3 span');
-											span.innerHTML = message;
+											var span = document.querySelector('h3 span')
+											span.innerHTML = message
 										} else {
-											var span = document.querySelector('h4 span');
-											span.innerHTML = message;
+											var span = document.querySelector('h4 span')
+											span.innerHTML = message
 }
 										
 										
