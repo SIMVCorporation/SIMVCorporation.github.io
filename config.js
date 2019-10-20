@@ -13,6 +13,7 @@
                             client.on('message', function(topic, message, packet) {
                                 console.log("Received '" + message + "' on '" + topic + "'");
 									var result = message.includes('ONLINE');
+									document.getElementById("result").innerHTML = result; 
 									console.log(result);
 										if(result == true){
 											var span = document.querySelector('h3 span')
