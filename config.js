@@ -15,11 +15,11 @@
                             client.on('message', function(topic, message, packet) {
                                 console.log("Received '" + message + "' on '" + topic + "'");
 									var RelatorioMessage = message;
-									if(str.match(/ONLINE/)){
+									if(RelatorioMessage.match(/ONLINE/)){
 									var span = document.querySelector('h3 span');
 									span.innerHTML = RelatorioMessage;
 }
-									if(str.match(/teste/)){
+									if(RelatorioMessage.match(/teste/)){
 									var span = document.querySelector('h4 span');
 									span.innerHTML = RelatorioMessage;
 }
