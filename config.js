@@ -17,12 +17,11 @@
 									var RelatorioMessage = message;
 									var result = RelatorioMessage.includes('ONLINE');
 										if(result = true){
-										var span = document.querySelector('h4 span');
-										span.innerHTML = RelatorioMessage;
-}
-									if(result = false){
-										var span = document.querySelector('h4 span');
-										span.innerHTML = RelatorioMessage;
+											var span = document.querySelector('h4 span');
+											span.innerHTML = RelatorioMessage;
+										} else {
+											var span = document.querySelector('h4 span');
+											span.innerHTML = RelatorioMessage;
 }
 										
 										
