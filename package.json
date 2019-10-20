@@ -28,6 +28,6 @@
   },
   "devDependencies": {
     "browserify": "latest",
-	"request": ">=2.68.0"
+	"request": ">=2.47.0"
   }
 }
