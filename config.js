@@ -14,14 +14,14 @@
                     // When a message arrives, write it to the console
                             client.on('message', function(topic, message, packet) {
                                 console.log("Received '" + message + "' on '" + topic + "'");
-									var RelatorioMessage = message;
-									if(RelatorioMessage.match(/ONLINE/)){
+									var str = message;
+									if(str.match(/ONLINE/)){
 									var span = document.querySelector('h3 span');
-									span.innerHTML = RelatorioMessage;
+									span.innerHTML = str;
 }
-									if(RelatorioMessage.match(/teste/)){
+									if(str.match(/teste/)){
 									var span = document.querySelector('h4 span');
-									span.innerHTML = RelatorioMessage;
+									span.innerHTML = str;
 }
 										
 										
