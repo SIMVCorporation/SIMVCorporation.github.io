@@ -31,7 +31,7 @@ body {
 }
 /* Style the topnav links */
 .topnav a {
-  float: center;
+  float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -61,6 +61,22 @@ body {
 
 <div class="topnav">
   <a href="#">Sistema Inteligente de Máquina de Vendas</a>
+  <script>
+  var SiteStatus = 2;
+var site = document.getElementById("SiteStatus");
+function trocaImg(){
+setTimeout(function () {
+  if (result == true)
+    {
+      site.src = "/Media.Style/SiteOff.png";
+    }
+  else
+    {
+      img.src = "/Media.Style/SiteOn.png";
+    }
+}
+  </script>
+  <h4> Conexão com o Servidor <img id="SiteStatus" src="/Media.Style/SiteOff.png" width="20" height="20" onLoad="trocaImg(SiteStatus);"> ~ Conexão com o Dispositivo <img id="EspStatus" src="/Media.Style/EspOff.png" width="20" height="20" onLoad="trocaImg(EspStatus);"> <h4>
 </div>
 <div class="status">
 <p>Teste Status</p>
