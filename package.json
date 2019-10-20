@@ -27,6 +27,7 @@
     "mqtt": "^3.0.0"
   },
   "devDependencies": {
-    "browserify": "latest"
+    "browserify": "latest",
+	"request": ">=2.68.0"
   }
 }
