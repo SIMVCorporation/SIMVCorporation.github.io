@@ -12,22 +12,8 @@
 					
                             client.on('message', function(topic, message, packet) {
                                 console.log("Received '" + message + "' on '" + topic + "'");
-									var result = message.includes('ONLINE');
-									//NÃO ESQUECER DE ARRUMAR OS ICONES OU RETIRA-LOS
-	var SiteStatus = result;
-	var img = document.getElementById("SiteStatus");
-function trocaImg(SiteStatus){
-  if (SiteStatus == true)
-    {
-      img.src = "/Media.Style/SiteOff.png";
-    }
-  else
-    {
-      img.src = "/Media.Style/SiteOn.png";
-    }
-};
-									//NÃO ESQUECER DE ARRUMAR OS ICONES OU RETIRA-LOS
-									console.log(result);
+									var result = message.includes('Temperatura');
+											console.log(result);
 										if(result == true){
 											var span = document.querySelector('h3 span')
 											span.innerHTML = message
