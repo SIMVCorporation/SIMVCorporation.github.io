@@ -25,8 +25,10 @@
                         });
 
 
-                        client.publish('SIMV/relatorio', 'Site ONLINE', function() {
-                            console.log("Message posted...");
+                        client.publish('SIMV/status', 'Site ONLINE', function() {
+                            console.log("Message posted...");	
+     var img = document.getElementById("SiteStatus");
+     img.src = "/Media.Style/SiteOn.png";
                         });
                     });
                 
