@@ -30,6 +30,11 @@
      var img = document.getElementById("SiteStatus");
      img.src = "/Media.Style/SiteOn.png";
                         });
+                        client.publish('SIMV/status', 'ESP ONLINE', function() {
+                            console.log("Message posted...");	
+     var img = document.getElementById("EspStatus");
+     img.src = "/Media.Style/EspOn.png";
+                        });
                     });
                 
             
