@@ -14,16 +14,14 @@ unsigned int distancia = 0;
 //Inicializa o sensor nos pinos definidos acima
 Ultrasonic ultrasonic(PIN_TRIGGER, PIN_ECHO);
 
-void setup()
-{
+void setup()  {
   Serial.begin(9600);
 
   Serial.println("Setup...");
 }
 
 
-void loop()
-{
+void loop() {
   verificarDistancia();
   delay(INTERVALO_LEITURA);
 }
@@ -32,8 +30,7 @@ void loop()
   VERIFICA A DISTANCIA ATUAL QUE O SENSOR ULTRASONIC ESTA LENDO
   E EM SEGUIDA, IMPRIME O VALOR NO DISPLAY, E ACENDE O LED CORRESPONDENTE
 */
-void verificarDistancia()
-{
+void verificarDistancia() {
 
   //recupera a distância atual lida pelo sensor
   distancia = getDistance();
@@ -42,18 +39,17 @@ void verificarDistancia()
   Serial.println(distancia);
 }
 
-/*
-  void vendas() {
-    if(distancia < 30 && distancia > 15){
-      x = "produto 1 vendido";
-      prod1 ++;
+void vendas() {
+  int x, y, prod1, prod2;
+  if(distancia < 30 && distancia > 15){
+    x = 2;
+    prod1 ++;
   }
-    else if ( distancia <= 15 && distancia >= 3){
-      y = "produto 2 vendido";
-      prod2 ++;
-    }
+  else if ( distancia <= 15 && distancia >= 3){
+    y = 2;
+    prod2 ++;
   }
-*/
+}
 
 // FAZ A LEITURA DA DISTANCIA ATUAL CALCULADA PELO SENSOR
 int getDistance() {
