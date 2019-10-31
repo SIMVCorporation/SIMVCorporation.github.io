@@ -17,13 +17,13 @@
 											console.log(result);
 											console.log(umidade);
 										if(result == true){
-											var span = document.querySelector('h4 span')
+											var span = document.querySelector('span')
 											span.innerHTML = message
 										} else if(umidade == true) 	{
-											var span = document.querySelector('h4 span2')
+											var span = document.querySelector('span2')
 											span.innerHTML = message
 										} else {
-											var span = document.querySelector('h4 span3')
+											var span = document.querySelector('span3')
 											span.innerHTML = message	
 										}							
                             });
