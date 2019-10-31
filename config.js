@@ -13,14 +13,19 @@
                             client.on('message', function(topic, message, packet) {
                                 console.log("Received '" + message + "' on '" + topic + "'");
 									var result = message.includes('Temperatura');
+									var umidade = message.includes('Umidade');
 											console.log(result);
+											console.log(umidade);
 										if(result == true){
-											var span = document.querySelector('h3 span')
+											var span = document.querySelector('h4 span')
 											span.innerHTML = message
-										} else 	{
-											var span = document.querySelector('h3 span2')
+										} else if(umidade == true) 	{
+											var span = document.querySelector('h4 span2')
 											span.innerHTML = message
-										}								
+										} else {
+											var span = document.querySelector('h4 span3')
+											span.innerHTML = message	
+										}							
                             });
                         });
 
