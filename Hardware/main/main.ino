@@ -2,21 +2,26 @@
 #include <WiFi.h> // Biblioteca do ESP32
 #include <PubSubClient.h> // Biblioteca do MQTT
 #include "DHT.h"
+#include <Ultrasonic.h> // Biblioteca Ultrasonic
 //************************************************
 
 //CONFIG*DHT11************************************
 #define DHTPIN  27// pino que dht11 eh concectado
 #define DHTTYPE DHT11 // DHT 11
 DHT dht(DHTPIN, DHTTYPE);
+unsigned int distancia = 0;
 //************************************************
 
-/*CONFIG*ULTRASONIC*******************************
-
-***********************************************/
+//CONFIG*ULTRASONIC*******************************
+#define INTERVALO_LEITURA 500 //(ms)
+#define PIN_TRIGGER   4
+#define PIN_ECHO      5
+Ultrasonic ultrasonic(PIN_TRIGGER, PIN_ECHO);
+//***********************************************
 
 // VARIAVEIS*PARA*CONEXAO***********************************************
-const char* ssid = "VIVOFIBRA-25F2"; // Usuário do WiFi
-const char* password = "mTZuCPVDtb"; // Senha do WiFI
+const char* ssid = "BLOCO B_PISO SUPERIOR_BV"; // Usuário do WiFi
+const char* password = "WiFiSen@i123"; // Senha do WiFI
 const char* mqttServer = "postman.cloudmqtt.com"; // Endereço do servidor
 const int mqttPort = 10281; // Porta do servidor
 const char* mqttUser = "ESP32"; // Usuário (se houver)
@@ -27,6 +32,7 @@ WiFiClient espClient; // Definição do cliente (WiFi)
 PubSubClient client(espClient); // Definição do cliente (MQTT -> ESP)
 
 int i;
+int v;
 int LED_BUILTIN = 2; //config led interno
 int contador = 1; // Contador
 char mensagem[30]; // Mensagem
@@ -46,21 +52,49 @@ void setup() {
 
 
 void loop() {
-  
+  for(i=0; i<60; i++){
+    verificarDistancia();
+    delay(INTERVALO_LEITURA);
+  }
   reconectabroker(); // Conecta ao broker 
   atualiza_temp(); // Atualiza temp e umidade no site
   
   //Serial.println(mensagem); // Mensagem pro serial  
   contador++; //Adciona o contador
 
-  //Aguarda 30 segundos para enviar mensagem
+  //Aguarda 1 segundos para recomecar
   digitalWrite(LED_BUILTIN, HIGH); //led high quando enviar msg
   delay(1000);
   digitalWrite(LED_BUILTIN, LOW); //desliga led
-  delay(9000);
 }
 //Conexao ao broker MQTT
 
+
+void verificarDistancia() {
+  //recupera a distância atual lida pelo sensor
+  distancia = getDistance();
+  if(distancia < 30){
+    v++;
+    sprintf(mensagem, "Venda %d confirmada", v); //salva msg
+    client.publish("SIMV/relatorio", mensagem); //Envia variavel mensagem ao broker
+    Serial.print("Distancia: ");
+    Serial.println(distancia);
+    Serial.println(v);
+    while(distancia<30){
+      distancia = getDistance();
+      delay(200);
+    }
+  }
+}
+
+int getDistance() {
+  //faz a leitura das informacoes do sensor (em cm)
+  int distanciaCM;
+  long microsec = ultrasonic.timing();
+  distanciaCM = ultrasonic.convert(microsec, Ultrasonic::CM);
+
+  return distanciaCM;
+}
 
 void atualiza_temp(){
   float h = dht.readHumidity();
@@ -70,9 +104,9 @@ void atualiza_temp(){
     Serial.println("Failed to read from DHT");
     delay(1000);
   }
-  sprintf(mensagem, "Temperatura %.2f ºC", t); //salva msg
+  sprintf(mensagem, "Temperatura: %.1f ºC", t); //salva msg
   client.publish("SIMV/relatorio", mensagem); //Envia variavel mensagem ao broker
-  sprintf(mensagem, "Umidade %.2f%%", h); //salva msg
+  sprintf(mensagem, "Umidade: %.0f%%", h); //salva msg
   client.publish("SIMV/relatorio", mensagem); //Envia variavel mensagem ao broker
   
   Serial.print("Mensagem enviada: "); // Mensagem no Console
