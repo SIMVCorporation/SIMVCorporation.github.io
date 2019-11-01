@@ -97,16 +97,15 @@ body {
 <body>
           
 	<div class="topnav">
-			<div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
-		<button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Fechar &times;</button>
-        	<center>
+		<div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+			<button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Fechar &times;</button>
+        		<center>
 				<h2>SIMV</h2>
 			</center>
- 		<a href="desenvolvedores.html" class="w3-bar-item w3-button">Desenvolvedores</a>
-  		<a href="projeto.html" class="w3-bar-item w3-button">Sobre o projeto</a>
-	</div>
-	<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-	<div>
+ 			<a href="desenvolvedores.html" class="w3-bar-item w3-button">Desenvolvedores</a>
+  			<a href="projeto.html" class="w3-bar-item w3-button">Sobre o projeto</a>
+		</div>
+		<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 		<button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
 	</div> 
 	<script>
@@ -119,10 +118,11 @@ body {
 	  document.getElementById("myOverlay").style.display = "none";
 	}	
 	</script>
+		<center>
 		<a href="#">Sistema Inteligente de Máquina de Vendas</a>
 		<img id="SiteStatus" src="/Media.Style/SiteOff.png" style="float:right;width:40px;height:40px;">
+		</center>
 	</div>
-	
 	<div class="container">
 		<center>	  
 			<table class="bordered striped centered">
@@ -145,9 +145,11 @@ body {
 			</table>
 		</center>
 	</div>
-	<a href="desenvolvedores.html" class="button" style="vertical-align:middle"><span>Desenvolvedores</span></a>			
-	<div class="logo">
+	<div>
+		<a href="desenvolvedores.html" class="button" style="vertical-align:middle"><span>Desenvolvedores</span></a>			
+		<div class="logo">
 		<img src="/Media.Style/LogoTransp.png" alt="SIMV logo" class="image">
+		
 	</div>
 </body>
 </html>
