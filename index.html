@@ -27,7 +27,22 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}								
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
 .button {
   display: inline-block;
   border-radius: 4px;
@@ -76,81 +91,15 @@ body {
   width: 200px;
   height: auto;
 }
-	
-	.sidebar {
-  position: fixed;
-  width: 8%;
-  height: 100vh;
-  background: #312450;
-  font-size: 0.65em;
-}
-
-.nav {
-  position: relative;
-  margin: 0 15%;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: bold;
-}
-
-.nav ul {
-  list-style: none;
-  
-  li {
-    position: relative;
-    margin: 3.2em 0;
-    
-    a {
-      line-height: 5em;
-      text-transform: uppercase;
-      text-decoration: none;
-      letter-spacing: 0.4em;
-      color: rgba(#FFF, 0.35);
-      display: block;
-      transition: all ease-out 300ms;
-    }
-    
-    &.active a {
-      color: white;
-    }
-    
-    &:not(.active)::after {
-      opacity: 0.2;
-    }
-    
-    &:not(.active):hover a {
-      color: rgba(#FFF, 0.75);
-    }
-    
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 0.2em;
-      background: black;
-      left: 0;
-      bottom: 0;
-      background-image: linear-gradient(to right, #5e42a6, #b74e91)
-    }
-  }
-}
-
-
 </style>
-<main class="main">
-	<aside class="sidebar">
-      <ul>
-	<nav class="nav">
-        <li class="active"><a href="#">SIMV</a></li>
-        <li><a href="#">Contato</a></li>
-        <li><a href="#">Sobre</a></li>
- 	<img id="SiteStatus" src="/Media.Style/SiteOff.png" style="float:left;width:40px;height:40px;">
-	</nav>
-      </ul>
-  </aside>
-</main>
-		<div class="container">
+
+	<div class="topnav">
+		<img id="SiteStatus" src="/Media.Style/SiteOff.png" style="float:right;width:40px;height:40px;">
+		<a href="#">Sistema Inteligente de Máquina de Vendas</a>
+		<a href="#">Desenvolvedores</a>
+		<a href="#">Sobre o Projeto</a>
+	</div>
+	<div class="container">
 		<center>	  
 			<table class="bordered striped centered">
 				<thead>
@@ -175,6 +124,7 @@ body {
 	<div>
 		<div class="logo">
 		<img src="/Media.Style/LogoTransp.png" alt="SIMV logo" class="image">
+		
 	</div>
 </body>
 </html>
