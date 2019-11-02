@@ -144,11 +144,6 @@ body {
   background-size: 100%;
   background-size: cover;
 }
-@media screen and (max-width: 768px) {
-body {
-  background-image: url(/Media.Style/FundoCell.png);
-}
-}
 
 .logo {
   position: fixed;
