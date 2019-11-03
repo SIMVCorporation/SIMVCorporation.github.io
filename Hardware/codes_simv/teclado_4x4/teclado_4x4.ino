@@ -71,3 +71,10 @@ void imprime_linha_coluna(int x, int y)
        delay(10);
        Serial.println();
 }
+
+void LigaMotor(){
+  digitalWrite(porta_rele1, LOW);
+  while(venda.confirmada){
+    
+  }
+}
