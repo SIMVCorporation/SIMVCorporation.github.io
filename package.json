@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/SIMVCorporation/SIMVCorporation.github.io#readme",
   "dependencies": {
+    "google-spreadsheet": "^2.0.8",
     "includes": "0.0.7",
     "mqtt": "^3.0.0"
   },
