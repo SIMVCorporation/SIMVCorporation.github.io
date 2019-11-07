@@ -154,6 +154,8 @@ body {
   display: block;
   width: 200px;
   height: auto;
+  position: fixed;
+ 
 }
 .formpage {
  positiom: fixed;
