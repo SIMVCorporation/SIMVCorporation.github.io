@@ -154,14 +154,6 @@ body {
   display: block;
   width: 200px;
   height: auto;
-  position: fixed;
  
 }
-.formpage {
- positiom: fixed;
- background-color: #FFFFFF;
- bottom: 10px;
- right: 10px;
- left: 40px;
- 
  
