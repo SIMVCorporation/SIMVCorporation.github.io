@@ -163,7 +163,8 @@ body {
 }
 
 div.container { 
- max-width: 10px;
+  max-width: 10px;
   padding-left: 8%;
   padding-top: 2%;
+  padding: 10px;
 }
