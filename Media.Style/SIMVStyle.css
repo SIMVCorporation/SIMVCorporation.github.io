@@ -162,7 +162,8 @@ body {
   text-align: center;
 }
 
-div.container {
+div.container { 
+ max-width: 10px;
   padding-left: 8%;
   padding-top: 2%;
 }
