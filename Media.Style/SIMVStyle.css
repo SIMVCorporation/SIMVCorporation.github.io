@@ -144,7 +144,6 @@ body {
   background-size: 100%;
   background-size: cover;
 }
-
 .logo {
   position: fixed;
   bottom: 10px;
@@ -154,4 +153,25 @@ body {
   display: block;
   width: 200px;
   height: auto;
+}
+ div.polaroidErick {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 80px;
+  top: 10px;
+  width: 16%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+div.containerErick { 
+  padding: 10px;
+}
+div.containerGeral { 
+  position: absolute;
+  left: 80px;
+  top: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
 }
