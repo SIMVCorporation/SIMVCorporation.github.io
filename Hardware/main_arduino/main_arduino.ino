@@ -1,8 +1,15 @@
   
 #include <Keypad.h> //INCLUSÃO DE BIBLIOTECA
+#include <Ultrasonic.h>
+
+
+//CONFIG*ULTRASONIC*******************************
+Ultrasonic ultrasonic(8, 9);
+//***********************************************
  
 const byte qtdLinhas = 4; //QUANTIDADE DE LINHAS DO TECLADO
 const byte qtdColunas = 4; //QUANTIDADE DE COLUNAS DO TECLADO
+int distancia;
  
 //CONSTRUÇÃO DA MATRIZ DE CARACTERES
 char matriz_teclas[qtdLinhas][qtdColunas] = {
@@ -32,9 +39,16 @@ void loop(){
     Serial.print("Tecla pressionada : "); //IMPRIME O TEXTO NO MONITOR SERIAL
     Serial.println(tecla_pressionada); //IMPRIME NO MONITOR SERIAL A TECLA PRESSIONADA
   }
+  distancia = ultrasonic.distanceRead();
   if (tecla_pressionada == '1'){
-    digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-    delay(1000);                       // wait for a second
-    digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+    digitalWrite(LED_BUILTIN, HIGH);
+      if(distancia < 30){
+        digitalWrite(LED_BUILTIN, LOW); 
+      }
+  } else if (tecla_pressionada == '2'){
+    digitalWrite(LED_BUILTIN, HIGH);
+      if(distancia < 30){
+        digitalWrite(LED_BUILTIN, LOW);
+      }
   }
 }

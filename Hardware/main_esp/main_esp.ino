@@ -13,10 +13,7 @@ unsigned int distancia = 0;
 //************************************************
 
 //CONFIG*ULTRASONIC*******************************
-#define INTERVALO_LEITURA 500 //(ms)
-#define PIN_TRIGGER   4
-#define PIN_ECHO      5
-Ultrasonic ultrasonic(PIN_TRIGGER, PIN_ECHO);
+Ultrasonic ultrasonic(5, 17);
 //***********************************************
 
 // VARIAVEIS*PARA*CONEXAO***********************************************
@@ -54,7 +51,7 @@ void setup() {
 void loop() {
   for(i=0; i<60; i++){
     verificarDistancia();
-    delay(INTERVALO_LEITURA);
+    delay(500);
   }
   reconectabroker(); // Conecta ao broker 
   atualiza_temp(); // Atualiza temp e umidade no site
@@ -72,7 +69,7 @@ void loop() {
 
 void verificarDistancia() {
   //recupera a distância atual lida pelo sensor
-  distancia = getDistance();
+  distancia = ultrasonic.distanceRead();
   if(distancia < 30){
     v++;
     sprintf(mensagem, "Venda %d confirmada", v); //salva msg
@@ -81,19 +78,10 @@ void verificarDistancia() {
     Serial.println(distancia);
     Serial.println(v);
     while(distancia<30){
-      distancia = getDistance();
+      distancia = ultrasonic.distanceRead();
       delay(200);
     }
   }
-}
-
-int getDistance() {
-  //faz a leitura das informacoes do sensor (em cm)
-  int distanciaCM;
-  long microsec = ultrasonic.timing();
-  distanciaCM = ultrasonic.convert(microsec, Ultrasonic::CM);
-
-  return distanciaCM;
 }
 
 void atualiza_temp(){
