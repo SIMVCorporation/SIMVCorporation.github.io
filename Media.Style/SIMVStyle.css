@@ -11,8 +11,7 @@ font-size:20px;
 }
 
 imagelogo {
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  position: fixed;
-  width: 20%;
 }
