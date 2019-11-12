@@ -1,10 +1,10 @@
   
-#include <Keypad.h> //INCLUSÃO DE BIBLIOTECA
-#include <Ultrasonic.h>
+#include <Keypad.h> //BIBLIOTECA TECLADO
+#include <Ultrasonic.h> //BIBLIOTECA SENSOR ULTRASSONICO
 
 
 //CONFIG*ULTRASONIC*******************************
-Ultrasonic ultrasonic(8, 9);
+Ultrasonic ultrasonic(8, 9); //Parametro do pino trigger e echo, respectivamente
 //***********************************************
  
 const byte qtdLinhas = 4; //QUANTIDADE DE LINHAS DO TECLADO
