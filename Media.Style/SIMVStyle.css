@@ -137,16 +137,15 @@ height: 100%;
 }
 
 logo {
-  position: fixed;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   top: 10px
 }
 image {
   display: block;
   width: 20%;
   height: auto;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
 }
  div.polaroidErick {
   display: block;
