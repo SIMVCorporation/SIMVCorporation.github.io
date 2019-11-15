@@ -1413,3 +1413,16 @@
 			}
 
 		}
+	.containerpdf{
+03         width: 100%;
+04         height: 100%;
+05         background-image: url(/Media.Style/FundoCell.png);
+06         display: flex;
+07         flex-direction: row;
+08         justify-content: center;
+09         align-items: center
+10     }
+11     .boxpdf {
+12         width: 80%;
+13         height: 80%;
+14         background: #fff;
