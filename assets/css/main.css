@@ -1414,14 +1414,14 @@
 
 		}
 	.containerpdf{
-03         width: 100%;
-04         height: 100%;
-06         display: flex;
-07         flex-direction: row;
-08         justify-content: center;
-09         align-items: center
-10     }
-11     .boxpdf {
-12         width: 80%;
-13         height: 80%;
-14         color: #FFFFFF;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center
+     }
+     .boxpdf {
+         width: 80%;
+         height: 80%;
+         color: #FFFFFF;
