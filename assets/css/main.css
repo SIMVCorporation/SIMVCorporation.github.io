@@ -1420,9 +1420,9 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-		top: 5px;
+		top: 3%;
      }
      .boxpdf {
-		height: 80vh;
-		width: 90vw;
+		height: 100vh;
+		width: 80vw;
          color: #FFFFFF;
