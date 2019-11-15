@@ -1414,7 +1414,7 @@
 
 		}
 	.containerpdf{
-        width: 100vw;
+        width: 90vw;
         height: 80vh;
         display: flex;
         flex-direction: row;
@@ -1424,5 +1424,5 @@
      }
      .boxpdf {
 		height: 80vh;
-		width: 100vw;
+		width: 90vw;
          color: #FFFFFF;
