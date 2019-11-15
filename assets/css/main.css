@@ -1405,8 +1405,8 @@
 		@media screen and (max-width: 736px) {
 
 			#footer {
-				padding: 3em 0 1em 0;
-				padding: 4em 0 2em 0;
+			padding: 3em 0 1em 0;
+			padding: 4em 0 2em 0;
 			background-color: #1b1b1f;
 			text-align: center;
 			float: bottom;
@@ -1419,9 +1419,9 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center
+        align-items: center;
+		top: 5px;
      }
      .boxpdf {
-         width: 80%;
-         height: 80%;
+		height: 90%;
          color: #FFFFFF;
