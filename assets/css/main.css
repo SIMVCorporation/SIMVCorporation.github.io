@@ -1554,11 +1554,11 @@ body.is-loading #banner:before {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     top: 3%;
 }
 
 .boxpdf {
-    height: 58vh;
+    height:60vh;
     width: 90vw;
     color: #FFFFFF;
+}
