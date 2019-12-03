@@ -1,10 +1,13 @@
   
 #include <Keypad.h> //BIBLIOTECA TECLADO
-#include <Ultrasonic.h> //BIBLIOTECA SENSOR ULTRASSONICO
+//#include <Ultrasonic.h> //BIBLIOTECA SENSOR ULTRASSONICO
 
+#define motor1 7
+#define motor2 6
+#define venda 8
 
 //CONFIG*ULTRASONIC*******************************
-Ultrasonic ultrasonic(8, 9); //Parametro do pino trigger e echo, respectivamente
+//Ultrasonic ultrasonic(8, 9); //Parametro do pino trigger e echo, respectivamente
 //***********************************************
  
 const byte qtdLinhas = 4; //QUANTIDADE DE LINHAS DO TECLADO
@@ -28,6 +31,12 @@ Keypad meuteclado = Keypad( makeKeymap(matriz_teclas), PinosqtdLinhas, PinosqtdC
  
 void setup(){
   pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(8, INPUT);
+  pinMode(9, INPUT);
+
+  pinMode(7, OUTPUT);
+  pinMode(6, OUTPUT);
+  
   Serial.begin(9600); //INICIALIZA A SERIAL
   Serial.println("Aperte uma tecla..."); //IMPRIME O TEXTO NO MONITOR SERIAL
   Serial.println(); //QUEBRA UMA LINHA NO MONITOR SERIAL
@@ -39,16 +48,16 @@ void loop(){
     Serial.print("Tecla pressionada : "); //IMPRIME O TEXTO NO MONITOR SERIAL
     Serial.println(tecla_pressionada); //IMPRIME NO MONITOR SERIAL A TECLA PRESSIONADA
   }
-  distancia = ultrasonic.distanceRead();
+//  distancia = ultrasonic.distanceRead();
   if (tecla_pressionada == '1'){
-    digitalWrite(LED_BUILTIN, HIGH);
-      if(distancia < 30){
-        digitalWrite(LED_BUILTIN, LOW); 
+    digitalWrite(motor1, HIGH);
+      if(venda == HIGH){
+        digitalWrite(motor1, LOW); 
       }
   } else if (tecla_pressionada == '2'){
-    digitalWrite(LED_BUILTIN, HIGH);
-      if(distancia < 30){
-        digitalWrite(LED_BUILTIN, LOW);
+    digitalWrite(motor2, HIGH);
+      if(venda == HIGH){
+        digitalWrite(motor2, LOW);
       }
   }
 }

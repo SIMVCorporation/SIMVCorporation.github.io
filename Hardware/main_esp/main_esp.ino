@@ -16,9 +16,11 @@ unsigned int distancia = 0;
 Ultrasonic ultrasonic(5, 17);
 //***********************************************
 
+#define arduino 2
+
 // VARIAVEIS*PARA*CONEXAO***********************************************
-const char* ssid = "BLOCO B_PISO SUPERIOR_BV"; // Usuário do WiFi
-const char* password = "WiFiSen@i123"; // Senha do WiFI
+const char* ssid = "VIVOFIBRA-25F2"; // Usuário do WiFi
+const char* password = "mTZuCPVDtb"; // Senha do WiFI
 const char* mqttServer = "postman.cloudmqtt.com"; // Endereço do servidor
 const int mqttPort = 10281; // Porta do servidor
 const char* mqttUser = "ESP32"; // Usuário (se houver)
@@ -36,6 +38,7 @@ char mensagem[30]; // Mensagem
 
 
 void setup() {
+  pinMode(arduino, OUTPUT);
   pinMode(LED_BUILTIN, OUTPUT);
   Serial.begin(115200);
   dht.begin();
@@ -79,6 +82,7 @@ void verificarDistancia() {
     Serial.println(v);
     while(distancia<30){
       distancia = ultrasonic.distanceRead();
+      digitalWrite(arduino, HIGH);
       delay(200);
     }
   }
